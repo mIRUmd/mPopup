@@ -8,6 +8,7 @@
   "description": "Fast, light and customizable jQuery popup plugin.",
   "main": "mPopup.jquery.js",
   "keywords": [
+    "jquery-plugin",
     "popup",
     "modal",
     "dialog",
