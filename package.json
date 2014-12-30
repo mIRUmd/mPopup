@@ -30,8 +30,7 @@
     "grunt": "~0.4.5",
     "grunt-contrib-cssmin": "~0.11.0",
     "grunt": "~0.4.5",
-    "grunt-jekyll": "~0.4.2",
-    "grunt-sass": "~0.17.0"
+    "grunt-jekyll": "~0.4.2"
   },
   "repository": {
     "type": "git",
