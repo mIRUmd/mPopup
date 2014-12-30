@@ -1,5 +1,6 @@
 /*! mPopup - v1.0.0 - 2014-12-30
- * Copyright (c) 2014 Balan Miroslav ; */
+ * https://github.com/mIRUmd/mPopup/
+ * Copyright (c) 2014 Balan Miroslav; */
 (function($) {
     var _positionPopup = function(elem,type) {
         var settings = elem.data('mPopup'),
