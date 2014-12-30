@@ -1,0 +1,26 @@
+{
+  "name": "mPopup",
+  "version": "1.0.0",
+  "homepage": "https://github.com/mIRUmd/mPopup",
+  "authors": [
+    "Balan Miroslav <mIRU.md@gmail.com>"
+  ],
+  "description": "Fast, light and customizable jQuery popup plugin.",
+  "main": "mPopup.jquery.js",
+  "keywords": [
+    "popup",
+    "modal",
+    "dialog",
+    "jquery",
+    "responsive",
+    "mobile"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
