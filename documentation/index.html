@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mPopup</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/github.css"/>
+    <link rel="stylesheet" href="../dist/mPopup.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="js/vendor/rainbow-custom.min.js"></script>
+    <script src="../dist/mPopup.jquery.js"></script>
+    <script src="js/main.func.js"></script>
+</head>
+<body>
+<div class="center-content">
+    <nav class="navbar navbar-default">
+        <a href="#" class="navbar-brand">mPopup</a>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="examples.html">Examples</a></li>
+            <li><a href="options.html">Options</a></li>
+            <li><a href="faqs.html">Faqs</a></li>
+        </ul>
+    </nav>
+    <h2>Why should I use this popup?</h2>
+    <ul>
+        <li>Popup can contain images, video, or HTML content</li>
+        <li>Uses CSS transitions for slide animation ,native hardware acceleration</li>
+        <li>Small file size, fully themed, simple to implement</li>
+        <li>Browser support: Firefox, Chrome, Safari, iOS, Android, IE7+</li>
+        <li>Many configuration <a href="options.html">options</a></li>
+    </ul>
+    <h2>How to install</h2>
+    <div class="step">
+        <h3>Step 1: Link required files</h3>
+        <p>First and most important, the jQuery library needs to be included (Google cdn or local jQuery file). Next, download the package from github or install via Bower: <code>bower install m-popup</code> , install via NPM: <code>npm install m-popup</code>,  and link the mPopup CSS file (for the theme) and the mPopup Javascript file.</p>
+        <pre><code data-language="html">    <!-- jQuery library (served from Google) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- mPopup Javascript file -->
+    <script src="/js/mPopup.jquery.min.js"></script>
+    <!-- mPopup CSS file -->
+    <link  href="/lib/mPopup.css" rel="stylesheet" /></code></pre>
+    </div>
+    <div class="step">
+        <h3>Step 2: Create HTML markup</h3>
+        <p>Create a <code>&lt;ul class="mPopup"&gt;</code> element, with any HTML content , in css have to show width and height of popup</p>
+    <pre><code data-language="html">    <div class="mPopup">
+        <!-- any HTML content -->
+    </div></code></pre>
+    <pre><code data-language="css">
+    .mPopup{
+        /* popup css code */
+        width: 60%;
+        height: 300px;
+    }
+    </code></pre>
+    </div>
+    <div class="step">
+        <h3>Step 3: Call the mPopup</h3>
+        <p>Call .mPopup() on <code>&lt;ul class="mPopup"&gt;</code>. Note that the call must be made inside of a $(document).ready() call, or the plugin will not work!</p>
+    <pre><code data-language="javascript">
+    $(document).ready(function(){
+        $('.mPopup').mPopup();
+    });
+    </code></pre>
+    </div>
+</div>
+</body>
+</html>

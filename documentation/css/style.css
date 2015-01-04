@@ -1,0 +1,13 @@
+.center-content{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.center-content pre .close{
+    float: none;
+    font-size: inherit;
+    font-weight: normal;
+    line-height: 1;
+    opacity: 1;
+    text-shadow: none;
+}
