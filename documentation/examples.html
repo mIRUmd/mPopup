@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mPopup</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/github.css"/>
+    <link rel="stylesheet" href="../dist/mPopup.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="js/vendor/rainbow-custom.min.js"></script>
+    <script src="../dist/mPopup.jquery.js"></script>
+    <script src="js/example.func.js"></script>
+</head>
+<body>
+<div class="center-content">
+    <nav class="navbar navbar-default">
+        <a href="#" class="navbar-brand">mPopup</a>
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="examples.html">Examples</a></li>
+            <li><a href="options.html">Options</a></li>
+            <li><a href="faqs.html">Faqs</a></li>
+        </ul>
+    </nav>
+    <h1>Examples</h1>
+    <h3>1. Basic popup</h3>
+    HTML :
+    <pre><code data-language="html">    <div id="sample1" class="mPopup">
+        <button class="mPopup-close">×</button>
+        <h1 class="title">Sample title</h1>
+    </div></code></pre>
+    JS :
+    <pre><code data-language="javascript">
+    // generate popup
+    var popup = $('#sample1').mPopup();
+
+    // on click on button open generated popup
+    $('#open-sample1').on('click',function(e){
+    e.preventDefault();
+        popup.mPopup('open');
+    });
+    </code></pre>
+
+    <h4>Result :</h4>
+    <a href="#" id="_open-sample1" class="btn btn-primary">Click me!</a>
+
+</div>
+<div id="_sample1" class="mPopup">
+    <button class="mPopup-close">×</button>
+    <div class="popup-header">Popup title</div>
+    <div class="popup-body">
+        Content ...
+    </div>
+</div>
+</body>
+</html>
