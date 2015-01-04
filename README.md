@@ -52,12 +52,12 @@ Create a `<ul class="mPopup">` element, with any HTML content , in css have to s
 Call .mPopup() on `<ul class="mPopup">`. Note that the call must be made inside of a $(document).ready() call, or the plugin will not work!
 
 ````
-    $(document).ready(function(){
-        // generate popup
-        var popup = $('.mPopup').mPopup();
-        // open generated popup
-        popup.mPopup('open');
-    });
+$(document).ready(function(){
+    // generate popup
+    var popup = $('.mPopup').mPopup();
+    // open generated popup
+    popup.mPopup('open');
+});
 ````
 
 ## [Changelog](https://github.com/mIRUmd/mPopup/releases)
