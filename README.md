@@ -34,7 +34,8 @@ First and most important, the jQuery library needs to be included (Google cdn or
 ### Step 2: Create HTML markup
 Create a `<ul class="mPopup">` element, with any HTML content , in css have to show width and height of popup
 
-````<div class="mPopup">
+````
+<div class="mPopup">
     <!-- any HTML content -->
 </div>
 ````
