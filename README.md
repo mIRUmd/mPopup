@@ -22,7 +22,8 @@ If you used mPopup in some interesting way, or on site of popular brand, I'd be 
 ### Step 1: Link required files
 First and most important, the jQuery library needs to be included (Google cdn or local jQuery file). Next, download the package from github or install via Bower: `bower install m-popup` , install via NPM: `npm install m-popup`, and link the mPopup CSS file (for the theme) and the mPopup Javascript file.
 
-````<!-- jQuery library (served from Google) -->
+````
+<!-- jQuery library (served from Google) -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <!-- mPopup Javascript file -->
 <script src="/js/mPopup.jquery.min.js"></script>
