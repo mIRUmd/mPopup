@@ -2,5 +2,4 @@
 * https://github.com/mIRUmd/mPopup/
 * Copyright (c) 2015 Balan Miroslav; */
 
-/*! https://github.com/mIRUmd/mPopup/
-* Copyright (c) 2015 Balan Miroslav; */.mPopup{top:50%;left:50%;background-color:#fff;border:1px solid #e0e0e0;z-index:9999;max-width:700px;display:none;width:88%}.mPopup-overlay{background-color:#fff;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";opacity:.7;position:fixed;width:100%;height:100%;top:0;left:0;z-index:9998;display:none}.mPopup-close{background:0 0;position:absolute;top:0;right:0;border:none;color:#ccc;font-size:2em;line-height:1}.mPopup .popup-header{margin:0;font-size:17px;border-bottom:1px solid #e5e5e5;padding:15px}.mPopup .popup-body{padding:15px}
+.mPopup{top:50%;left:50%;background-color:#fff;border:1px solid #e0e0e0;z-index:9999;max-width:700px;display:none;width:88%;border-radius:3px}.mPopup-overlay{background-color:#fff;opacity:.7;position:fixed;width:100%;height:100%;top:0;left:0;z-index:9998;display:none}.mPopup-close{background:0 0;position:absolute;top:0;right:0;border:none;color:#ccc;font-size:2em;line-height:1}.mPopup .popup-header{margin:0;font-size:17px;border-bottom:1px solid #e5e5e5;padding:15px}.mPopup .popup-body{padding:15px}

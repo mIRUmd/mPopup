@@ -1,5 +1,7 @@
-/*! https://github.com/mIRUmd/mPopup/
+/*! mPopup - v1.0.0 - 2015-01-05
+* https://github.com/mIRUmd/mPopup/
 * Copyright (c) 2015 Balan Miroslav; */
+
 .mPopup{
     top: 50%;
     left: 50%;
@@ -9,11 +11,12 @@
     max-width: 700px;
     display: none;
     width: 88%;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
 }
 
 .mPopup-overlay{
     background-color: #fff;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
     opacity: 0.7;
     position: fixed;
     width: 100%;

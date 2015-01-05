@@ -1,6 +1,7 @@
 {
-  "name": "mPopup",
-  "version": "1.0.0",
+  "name": "m-popup",
+  "version": "1.0.5",
+  "title": "mPopup",
   "homepage": "https://github.com/mIRUmd/mPopup",
   "authors": [
     "Balan Miroslav <mIRU.md@gmail.com>"

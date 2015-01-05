@@ -1,5 +1,23 @@
-/*! https://github.com/mIRUmd/mPopup/
- * Copyright (c) 2015 Balan Miroslav; */
+/*! mPopup - v1.0.0 - 2015-01-05
+* https://github.com/mIRUmd/mPopup/
+* Copyright (c) 2015 Balan Miroslav; */
+
+/*! mPopup - v1.0.0 - 2015-01-05
+* https://github.com/mIRUmd/mPopup/
+* Copyright (c) 2015 Balan Miroslav; */
+
+/*! mPopup - v1.0.0 - 2015-01-05
+* https://github.com/mIRUmd/mPopup/
+* Copyright (c) 2015 Balan Miroslav; */
+
+/*! mPopup - v1.0.0 - 2015-01-05
+* https://github.com/mIRUmd/mPopup/
+* Copyright (c) 2015 Balan Miroslav; */
+
+/*! mPopup - v1.0.0 - 2015-01-05
+* https://github.com/mIRUmd/mPopup/
+* Copyright (c) 2015 Balan Miroslav; */
+
 (function($) {
     var _positionPopup = function(elem,type) {
         var settings = elem.data('mPopup'),
