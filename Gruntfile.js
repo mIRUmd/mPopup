@@ -13,7 +13,7 @@ module.exports = function(grunt) {
                     banner: '<%= banner %>'
                 },
                 files: {
-                    src: [ 'dev/*.js','dist/*.css','dist/*.js']
+                    src: [ 'dist/*.css','dist/*.js']
                 }
             }
         },
