@@ -8,71 +8,116 @@
     <link rel="stylesheet" href="../dist/mPopup.css"/>
     <link rel="stylesheet" href="css/style.css"/>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src="js/vendor/rainbow-custom.min.js"></script>
-    <script src="../dist/mPopup.jquery.js"></script>
-    <script src="js/example.func.js"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#sidenav">
 <div class="center-content">
-    <nav class="navbar navbar-default">
-        <a href="#" class="navbar-brand">mPopup</a>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="examples.html">Examples</a></li>
-            <li><a href="options.html">Options</a></li>
-            <li><a href="faqs.html">Faqs</a></li>
-        </ul>
-    </nav>
-    <h2>Why should I use this popup?</h2>
-    <ul>
-        <li>Popup can contain images, video, or HTML content</li>
-        <li>Uses CSS transitions for slide animation ,native hardware acceleration</li>
-        <li>Small file size, fully themed, simple to implement</li>
-        <li>Browser support: Firefox, Chrome, Safari, iOS, Android, IE7+</li>
-        <li>Many configuration <a href="options.html">options</a></li>
-    </ul>
-    <h2>How to install</h2>
-    <div class="step">
-        <h3>Step 1: Link required files</h3>
-        <p>First and most important, the jQuery library needs to be included (Google cdn or local jQuery file). Next, download the package from github or install via Bower: <code>bower install m-popup</code> , install via NPM: <code>npm install m-popup</code>,  and link the mPopup CSS file (for the theme) and the mPopup Javascript file.</p>
-        <pre><code data-language="html">    <!-- jQuery library (served from Google) -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <!-- mPopup Javascript file -->
-    <script src="/js/mPopup.jquery.min.js"></script>
-    <!-- mPopup CSS file -->
-    <link  href="/lib/mPopup.css" rel="stylesheet" /></code></pre>
-    </div>
-    <div class="step">
-        <h3>Step 2: Create HTML markup</h3>
-        <p>Create a <code>&lt;ul class="mPopup"&gt;</code> element, with any HTML content , in css have to show width and height of popup</p>
-        HTML :
-    <pre><code data-language="html">    <div class="mPopup">
-        <!-- any HTML content -->
-    </div></code></pre>
-        CSS :
-    <pre><code data-language="css">
+    <div class="row">
+        <div role="main" class="col-md-9">
+            <h2 class="page-header" id="top">Why should I use this popup?</h2>
+            <ul>
+                <li>Popup can contain images, video, or HTML content</li>
+                <li>Uses CSS transitions for slide animation ,native hardware acceleration</li>
+                <li>Small file size, fully themed, simple to implement</li>
+                <li>Browser support: Firefox, Chrome, Safari, iOS, Android, IE7+</li>
+                <li>Many configuration <a href="options.html">options</a></li>
+            </ul>
+            <div class="section">
+                <h2 class="page-header" id="how-to-install">How to install</h2>
+                <div class="step">
+                    <h3>Step 1: Link required files</h3>
+                    <p>First and most important, the jQuery library needs to be included (Google cdn or local jQuery file). Next, download the package from github or install via Bower: <code>bower install m-popup</code> , install via NPM: <code>npm install m-popup</code>,  and link the mPopup CSS file (for the theme) and the mPopup Javascript file.</p>
+            <pre><code data-language="html">    &lt;!-- jQuery library (served from Google) --&gt;
+    &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- mPopup Javascript file --&gt;
+    &lt;script src=&quot;/js/mPopup.jquery.min.js&quot;&gt;&lt;/script&gt;
+    &lt;!-- mPopup CSS file --&gt;
+    &lt;link  href=&quot;/lib/mPopup.css&quot; rel=&quot;stylesheet&quot; /&gt;
+            </code></pre>
+                </div>
+                <div class="step">
+                    <h3>Step 2: Create HTML markup</h3>
+                    <p>Create a <code>&lt;ul class="mPopup"&gt;</code> element, with any HTML content , in css have to show width and height of popup</p>
+                    HTML :
+        <pre><code data-language="html">    &lt;div class=&quot;mPopup&quot;&gt;
+    &lt;!-- any HTML content --&gt;
+    &lt;/div&gt;</code></pre>
+                    CSS :
+        <pre><code data-language="css">
     .mPopup{
-        /* popup css code */
+    /* popup css code */
         width: 60%;
         height: 300px;
     }
-    </code></pre>
-    </div>
-    <div class="step">
-        <h3>Step 3: Call the mPopup</h3>
-        <p>Call .mPopup() on <code>&lt;ul class="mPopup"&gt;</code>. Note that the call must be made inside of a $(document).ready() call, or the plugin will not work!</p>
-    <pre><code data-language="javascript">
+        </code></pre>
+                </div>
+                <div class="step">
+                    <h3>Step 3: Call the mPopup</h3>
+                    <p>Call .mPopup() on <code>&lt;ul class="mPopup"&gt;</code>. Note that the call must be made inside of a $(document).ready() call, or the plugin will not work!</p>
+        <pre><code data-language="javascript">
     $(document).ready(function(){
         // generate popup
-        var popup = $('.mPopup').mPopup();
+        var popup = $(&#39;.mPopup&#39;).mPopup();
         // open generated popup
-        popup.mPopup('open');
+        popup.mPopup(&#39;open&#39;);
+    });
+        </code></pre>
+                </div>
+            </div>
+            <div class="section">
+                <h2 id="examples" class="page-header">Examples</h2>
+                <h3>1. Basic popup</h3>
+                HTML :
+    <pre><code data-language="html">    &lt;div id=&quot;sample1&quot; class=&quot;mPopup&quot;&gt;
+        &lt;button class=&quot;mPopup-close&quot;&gt;&#215;&lt;/button&gt;
+        &lt;h1 class=&quot;title&quot;&gt;Sample title&lt;/h1&gt;
+    &lt;/div&gt;
+    </code></pre>
+                JS :
+    <pre><code data-language="javascript">
+    // generate popup
+    var popup = $(&#39;#sample1&#39;).mPopup();
+
+    // on click on button open generated popup
+    $(&#39;#open-sample1&#39;).on(&#39;click&#39;,function(e){
+        e.preventDefault();
+        popup.mPopup(&#39;open&#39;);
     });
     </code></pre>
+
+                <h4>Result :</h4>
+                <a href="#" id="_open-sample1" class="btn btn-primary">Click me!</a>
+                <div id="_sample1" class="mPopup">
+                    <button class="mPopup-close">×</button>
+                    <div class="popup-header">Popup title</div>
+                    <div class="popup-body">
+                        Content ...
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="complementary" class="col-md-3">
+            <nav class="sidebar-menu nav-pills nav-stacked" id="sidenav" data-spy="affix">
+                <a href="#top">mPopup</a>
+                <ul class="nav">
+                    <li><a href="#how-to-install">How to install</a></li>
+                    <li><a href="#examples">Examples</a></li>
+                    <li><a href="#usage">Usage</a></li>
+                    <li><a href="#options">Options</a></li>
+                    <li><a href="#methods">Methods</a></li>
+                    <li><a href="#events">Events</a></li>
+                </ul>
+                <a href="#top" class="back-to-top">
+                    Back to top
+                </a>
+            </nav>
+        </div>
     </div>
+
 </div>
-Check the examples and FAQs for more information on installation and customization
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="js/vendor/rainbow-custom.min.js"></script>
+<script src="../dist/mPopup.jquery.min.js"></script>
+<script src="js/main.func.js"></script>
 </body>
 </html>

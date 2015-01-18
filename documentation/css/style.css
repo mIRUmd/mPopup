@@ -11,3 +11,27 @@
     opacity: 1;
     text-shadow: none;
 }
+
+.sidebar-menu{
+    width: 263px;
+    top: 20px;
+}
+
+.sidebar-menu li a{
+    color: #999;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px 0 5px 20px;
+    margin: 7px 0;
+    line-height: 1;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li a:focus,
+.sidebar-menu li.active a{
+    background-color: transparent;
+    border-left: 1px solid #563d7c;
+    color: #563d7c;
+    text-decoration: none;
+}
