@@ -1,6 +1,6 @@
 {
   "name": "m-popup",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "title": "mPopup",
   "description": "jQuery modal dialog plugin. Can display inline HTML, iframes (YouTube video, Vimeo, Google Maps).",
   "keywords": [
