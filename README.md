@@ -16,6 +16,9 @@ If you used mPopup in some interesting way, or on site of popular brand, I'd be 
 * Browser support: Firefox, Chrome, Safari, iOS, Android, IE7+
 * Many configuration options
 
+For complete documentation and examples, visit:
+[http://mirudev.com/mpopup/](http://mirudev.com/mpopup/)
+
 
 ## How to install
 
