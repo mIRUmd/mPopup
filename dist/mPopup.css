@@ -1,4 +1,4 @@
-/*! mPopup - v1.0.6 - 2015-02-24
+/*! mPopup - v1.0.7 - 2015-02-24
 * https://github.com/mIRUmd/mPopup/
 * Copyright (c) 2015 Balan Miroslav; */
 
@@ -16,7 +16,7 @@
 }
 
 .mPopup-overlay{
-    background-color: #fff;
+    background-color: #000;
     opacity: 0.7;
     position: fixed;
     width: 100%;
@@ -38,6 +38,8 @@
     line-height: 1;
 }
 
+.mPopup-close:hover{ color: #3e3e3e; }
+
 .mPopup .popup-header{
     margin: 0;
     font-size: 17px;
@@ -48,3 +50,4 @@
 .mPopup .popup-body{
     padding: 15px;
 }
+.hljs{background: none}
