@@ -71,3 +71,7 @@ Script is MIT licensed and free and will always be kept this way.
 
 Created by [@mIRUmd](http://twitter.com/mIRUmd) & [contributors](https://github.com/mIRUmd/mPopup/contributors).
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mIRUmd/mpopup/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
