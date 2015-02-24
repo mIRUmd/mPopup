@@ -25,7 +25,7 @@
             }
 
         }else{
-            var posElement = (settings.typePositionElement == 'offset') ?
+            var posElement = (settings.typePositionObject == 'offset') ?
                                 settings.positionElement.offset() : settings.positionElement.position();
 
             posTop = posElement.top;
@@ -59,7 +59,7 @@
     }
 
     function _triggerButtonClose($this,settings){
-        $this.on('click',settings.closeClass,function(e){
+        $this.on('click','.' + settings.closeClass,function(e){
             e.preventDefault();
             $this.mPopup('close');
             $this.off('click');
@@ -87,16 +87,16 @@
                 if ($this.length == 0) { return; }
                 if (typeof(settings) == 'undefined') {
                     var defaults = {
-                        speed: 400,
                         type : 'fixed',
-                        closeClass : '.mPopup-close',
+                        closeClass : 'mPopup-close',
                         showOverlay : true,
                         closeOnOverlayClick : true,
                         overlayClass : 'mPopup-overlay',
                         overlayFade : true,
                         animationType : 'fade',
+                        animationSpeed: 400,
                         positionElement : null,
-                        typePositionElement: 'offset',
+                        typePositionObject: 'offset',
                         modifyPosition : {
                             top : 0,
                             left : 0
@@ -141,9 +141,9 @@
             }
 
             if(settings.animationType == 'slide'){
-                $this.slideDown(settings.speed);
+                $this.slideDown(settings.animationSpeed);
             }else if(settings.animationType == 'fade'){
-                $this.fadeIn(settings.speed);
+                $this.fadeIn(settings.animationSpeed);
             }else{
                 $this.show();
             }
@@ -180,9 +180,9 @@
             };
 
             if(settings.animationType == 'slide'){
-                $this.slideUp(settings.speed,hideOverlay);
+                $this.slideUp(settings.animationSpeed,hideOverlay);
             }else if(settings.animationType == 'fade'){
-                $this.fadeOut(settings.speed,hideOverlay);
+                $this.fadeOut(settings.animationSpeed,hideOverlay);
             }else{
                 $this.hide();
                 hideOverlay();

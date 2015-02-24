@@ -1,4 +1,4 @@
-/*! mPopup - v1.0.6 - 2015-01-20
+/*! mPopup - v1.0.6 - 2015-02-24
 * https://github.com/mIRUmd/mPopup/
 * Copyright (c) 2015 Balan Miroslav; */
 
@@ -9,7 +9,7 @@
         });
     }
     function _triggerButtonClose($this, settings) {
-        $this.on("click", settings.closeClass, function(e) {
+        $this.on("click", "." + settings.closeClass, function(e) {
             e.preventDefault(), $this.mPopup("close"), $this.off("click");
         });
     }
@@ -27,7 +27,7 @@
             var posTop = ($window.height - $elem.height) / 2, posLeft = ($window.width - $elem.width) / 2;
             "absolute" == type && (posTop = posTop >= 20 ? posTop : 20, posTop = $document.scrollTop() + posTop);
         } else {
-            var posElement = "offset" == settings.typePositionElement ? settings.positionElement.offset() : settings.positionElement.position();
+            var posElement = "offset" == settings.typePositionObject ? settings.positionElement.offset() : settings.positionElement.position();
             posTop = posElement.top, posLeft = posElement.left;
         }
         if ("undefined" != typeof posModify.top && (posTop += posModify.top), "undefined" != typeof posModify.left && (posLeft += posModify.left), 
@@ -43,16 +43,16 @@
                 if (0 != $this.length) {
                     if ("undefined" == typeof settings) {
                         var defaults = {
-                            speed: 400,
                             type: "fixed",
-                            closeClass: ".mPopup-close",
+                            closeClass: "mPopup-close",
                             showOverlay: !0,
                             closeOnOverlayClick: !0,
                             overlayClass: "mPopup-overlay",
                             overlayFade: !0,
                             animationType: "fade",
+                            animationSpeed: 400,
                             positionElement: null,
-                            typePositionElement: "offset",
+                            typePositionObject: "offset",
                             modifyPosition: {
                                 top: 0,
                                 left: 0
@@ -77,7 +77,7 @@
                 "class": settings.overlayClass
             }).appendTo("body")), 0 == $this.length ? (console.error("Cannot find element  !"), 
             !1) : (_positionPopup($this, settings.type), settings.showOverlay && (settings.overlayFade ? overlay.fadeIn("fast") : overlay.show()), 
-            "slide" == settings.animationType ? $this.slideDown(settings.speed) : "fade" == settings.animationType ? $this.fadeIn(settings.speed) : $this.show(), 
+            "slide" == settings.animationType ? $this.slideDown(settings.animationSpeed) : "fade" == settings.animationType ? $this.fadeIn(settings.animationSpeed) : $this.show(), 
             settings.onOpen && settings.onOpen(), _triggerCloseOnOverlay($this, settings, overlay), 
             _triggerButtonClose($this, settings), void $(window).resize(function() {
                 _positionPopup($this, settings.type);
@@ -89,7 +89,7 @@
                     overlay.removeClass(settings.overlayClass);
                 }) : overlay.hide().removeClass(settings.overlayClass)), settings.onClose && settings.onClose();
             };
-            "slide" == settings.animationType ? $this.slideUp(settings.speed, hideOverlay) : "fade" == settings.animationType ? $this.fadeOut(settings.speed, hideOverlay) : ($this.hide(), 
+            "slide" == settings.animationType ? $this.slideUp(settings.animationSpeed, hideOverlay) : "fade" == settings.animationType ? $this.fadeOut(settings.animationSpeed, hideOverlay) : ($this.hide(), 
             hideOverlay()), $(window).off("resize");
         },
         "recalculate-position": function() {

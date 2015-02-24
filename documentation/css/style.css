@@ -35,3 +35,21 @@
     color: #563d7c;
     text-decoration: none;
 }
+
+.mPopup.modal-theme{
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.41);
+}
+.mPopup.modal-theme .popup-footer{ text-align: right}
+
+.section .table pre{
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.section .table tr:first-child th{
+    border: none;
+}
+

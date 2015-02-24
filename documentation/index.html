@@ -11,21 +11,20 @@
 </head>
 <body data-spy="scroll" data-target="#sidenav">
 <div class="center-content">
-    <div class="row">
-        <div role="main" class="col-md-9">
-            <h2 class="page-header" id="top">Why should I use this popup?</h2>
-            <ul>
-                <li>Popup can contain images, video, or HTML content</li>
-                <li>Uses CSS transitions for slide animation ,native hardware acceleration</li>
-                <li>Small file size, fully themed, simple to implement</li>
-                <li>Browser support: Firefox, Chrome, Safari, iOS, Android, IE7+</li>
-                <li>Many configuration <a href="options.html">options</a></li>
-            </ul>
-            <div class="section">
-                <h2 class="page-header" id="how-to-install">How to install</h2>
-                <div class="step">
-                    <h3>Step 1: Link required files</h3>
-                    <p>First and most important, the jQuery library needs to be included (Google cdn or local jQuery file). Next, download the package from github or install via Bower: <code>bower install m-popup</code> , install via NPM: <code>npm install m-popup</code>,  and link the mPopup CSS file (for the theme) and the mPopup Javascript file.</p>
+    <div role="main" class="col-md-9">
+        <h2 class="page-header" id="top">Why should I use this popup?</h2>
+        <ul>
+            <li>Popup can contain images, video, or HTML content</li>
+            <li>Uses CSS transitions for slide animation ,native hardware acceleration</li>
+            <li>Small file size, fully themed, simple to implement</li>
+            <li>Browser support: Firefox, Chrome, Safari, iOS, Android, IE7+</li>
+            <li>Many configuration <a href="options.html">options</a></li>
+        </ul>
+        <div class="section">
+            <h2 class="page-header" id="how-to-install">How to install</h2>
+            <div class="step">
+                <h3>Step 1: Link required files</h3>
+                <p>First and most important, the jQuery library needs to be included (Google cdn or local jQuery file). Next, download the package from github or install via Bower: <code>bower install m-popup</code> , install via NPM: <code>npm install m-popup</code>,  and link the mPopup CSS file (for the theme) and the mPopup Javascript file.</p>
             <pre><code data-language="html">    &lt;!-- jQuery library (served from Google) --&gt;
     &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js&quot;&gt;&lt;/script&gt;
     &lt;!-- mPopup Javascript file --&gt;
@@ -33,26 +32,26 @@
     &lt;!-- mPopup CSS file --&gt;
     &lt;link  href=&quot;/lib/mPopup.css&quot; rel=&quot;stylesheet&quot; /&gt;
             </code></pre>
-                </div>
-                <div class="step">
-                    <h3>Step 2: Create HTML markup</h3>
-                    <p>Create a <code>&lt;ul class="mPopup"&gt;</code> element, with any HTML content , in css have to show width and height of popup</p>
-                    HTML :
+            </div>
+            <div class="step">
+                <h3>Step 2: Create HTML markup</h3>
+                <p>Create a <code>&lt;ul class="mPopup"&gt;</code> element, with any HTML content , in css have to show width and height of popup</p>
+                HTML :
         <pre><code data-language="html">    &lt;div class=&quot;mPopup&quot;&gt;
     &lt;!-- any HTML content --&gt;
     &lt;/div&gt;</code></pre>
-                    CSS :
+                CSS :
         <pre><code data-language="css">
     .mPopup{
-    /* popup css code */
+        /* popup css code */
         width: 60%;
         height: 300px;
     }
         </code></pre>
-                </div>
-                <div class="step">
-                    <h3>Step 3: Call the mPopup</h3>
-                    <p>Call .mPopup() on <code>&lt;ul class="mPopup"&gt;</code>. Note that the call must be made inside of a $(document).ready() call, or the plugin will not work!</p>
+            </div>
+            <div class="step">
+                <h3>Step 3: Call the mPopup</h3>
+                <p>Call .mPopup() on <code>&lt;ul class="mPopup"&gt;</code>. Note that the call must be made inside of a $(document).ready() call, or the plugin will not work!</p>
         <pre><code data-language="javascript">
     $(document).ready(function(){
         // generate popup
@@ -61,18 +60,22 @@
         popup.mPopup(&#39;open&#39;);
     });
         </code></pre>
-                </div>
             </div>
-            <div class="section">
-                <h2 id="examples" class="page-header">Examples</h2>
-                <h3>1. Basic popup</h3>
-                HTML :
-    <pre><code data-language="html">    &lt;div id=&quot;sample1&quot; class=&quot;mPopup&quot;&gt;
+        </div>
+        <div class="section">
+            <h2 id="examples" class="page-header">Examples</h2>
+            <h3>1. Basic popup</h3>
+            HTML :
+    <pre><code data-language="html">    &lt;a href=&quot;#&quot; id=&quot;_open-sample1&quot; class=&quot;btn btn-primary&quot;&gt;Click me!&lt;/a&gt;
+    &lt;div id=&quot;_sample1&quot; class=&quot;mPopup&quot;&gt;
         &lt;button class=&quot;mPopup-close&quot;&gt;&#215;&lt;/button&gt;
-        &lt;h1 class=&quot;title&quot;&gt;Sample title&lt;/h1&gt;
-    &lt;/div&gt;
-    </code></pre>
-                JS :
+        &lt;div class=&quot;popup-header&quot;&gt;Popup title&lt;/div&gt;
+            &lt;div class=&quot;popup-body&quot;&gt;
+            Content ...
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+            JS :
     <pre><code data-language="javascript">
     // generate popup
     var popup = $(&#39;#sample1&#39;).mPopup();
@@ -84,39 +87,217 @@
     });
     </code></pre>
 
-                <h4>Result :</h4>
-                <a href="#" id="_open-sample1" class="btn btn-primary">Click me!</a>
-                <div id="_sample1" class="mPopup">
-                    <button class="mPopup-close">×</button>
-                    <div class="popup-header">Popup title</div>
-                    <div class="popup-body">
-                        Content ...
-                    </div>
+            <h4>Result :</h4>
+            <a href="#" id="_open-sample1" class="btn btn-primary">Click me!</a>
+            <div id="_sample1" class="mPopup">
+                <button class="mPopup-close">×</button>
+                <div class="popup-header">Popup title</div>
+                <div class="popup-body">
+                    Content ...
                 </div>
             </div>
         </div>
-        <div role="complementary" class="col-md-3">
-            <nav class="sidebar-menu nav-pills nav-stacked" id="sidenav" data-spy="affix">
-                <a href="#top">mPopup</a>
-                <ul class="nav">
-                    <li><a href="#how-to-install">How to install</a></li>
-                    <li><a href="#examples">Examples</a></li>
-                    <li><a href="#usage">Usage</a></li>
-                    <li><a href="#options">Options</a></li>
-                    <li><a href="#methods">Methods</a></li>
-                    <li><a href="#events">Events</a></li>
-                </ul>
-                <a href="#top" class="back-to-top">
-                    Back to top
-                </a>
-            </nav>
+        <br />
+        <h3>2. Basic modal</h3>
+        JS :
+    <pre><code data-language="javascript">
+    var popup2 = $(&#39;#sample2&#39;).mPopup({
+        showOverlay : false
+    });
+    $(&#39;#open-sample2&#39;).on(&#39;click&#39;,function(e){
+        e.preventDefault();
+        popup2.mPopup(&#39;open&#39;);
+    });
+    </code></pre>
+
+        <h4>Result :</h4>
+        <a href="#" id="_open-sample2" class="btn btn-primary">Click me!</a>
+        <div id="_sample2" class="mPopup modal-theme">
+            <button class="mPopup-close">×</button>
+            <div class="popup-header">Empty the recycle bin?</div>
+            <div class="popup-body">
+                These items will be permanently deleted and cannot be recovered. Are you sure?
+            </div>
+            <div class="popup-footer">
+                <button class="btn btn-danger" type="button">Delete all items</button>
+                <button class="btn btn-default" type="button">Cancel</button>
+            </div>
+        </div>
+        <div class="section">
+            <h2 id="options" class="page-header">Options</h2>
+            <table class="table options">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Options</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>type</td>
+                    <td>
+                        <div>default : fixed</div>
+                        <div>options : fixed , absolute</div>
+                    </td>
+                    <td>Sets a fixed or absolute position for mPopup.</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>closeClass</td>
+                    <td>
+                        <div>default : mPopup-close</div>
+                        <div>options : string (class name)</div>
+                    </td>
+                    <td>Class name to trigger closing of mPopup.</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>closeOnOverlayClick</td>
+                    <td>
+                        <div>default : true</div>
+                        <div>options : boolean (true / false)</div>
+                    </td>
+                    <td>Close mPopup when click on overlay.</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>overlayClass</td>
+                    <td>
+                        <div>default : mPopup-overlay</div>
+                        <div>options : string (class name)</div>
+                    </td>
+                    <td>Overlay class name.</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>overlayFade</td>
+                    <td>
+                        <div>default : true</div>
+                        <div>options : boolean (true / false)</div>
+                    </td>
+                    <td>Overlay with fade animation or just hide.</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>animationType</td>
+                    <td>
+                        <div>default : fade</div>
+                        <div>options : string (fade / slide) </div>
+                    </td>
+                    <td>Animation type for popup on opening and closing.</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>animationSpeed</td>
+                    <td>
+                        <div>default : 400</div>
+                        <div>options : (slow / fast) or integer </div>
+                    </td>
+                    <td>Speed of animation.</td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>positionElement</td>
+                    <td>
+                        <div>default : null</div>
+                        <div>options : jQuery object </div>
+                    </td>
+                    <td>Position popup relative to element.</td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>typePositionObject</td>
+                    <td>
+                        <div>default : offset</div>
+                        <div>options : (offset / position) </div>
+                    </td>
+                    <td>Type position of element to align.</td>
+                </tr>
+                <tr>
+                    <th scope="row">10</th>
+                    <td>modifyPosition</td>
+                    <td>
+                        <div>default : { top : 0, left : 0 }</div>
+                        <div>options : Object </div>
+                    </td>
+                    <td>Modification of current position of mPopup. </td>
+                </tr>
+            </table>
+        </div>
+        <div class="section">
+            <h2 id="methods" class="page-header">Methods</h2>
+            <table class="table options">
+                <tr>
+                    <th>#</th>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><pre><code data-language="javascript">$('#elem').mPopup('open')</code></pre></td>
+                    <td>Manually opens a mPopup.</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><pre><code data-language="javascript">$('#elem').mPopup('close')</code></pre></td>
+                    <td>Manually closes a mPopup.</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td><pre><code data-language="javascript">$('#elem').mPopup('recalculate-position')</code></pre></td>
+                    <td>Recalculate current position of mPopup.</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td><pre><code data-language="javascript">$('#elem').mPopup('destroy')</code></pre></td>
+                    <td>Destroy created popup.</td>
+                </tr>
+            </table>
+        </div>
+        <div class="section">
+            <h2 id="events" class="page-header">Events</h2>
+            <table class="table options">
+                <tr>
+                    <th>#</th>
+                    <th>Event</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td><pre><code data-language="javascript">$('#elem').mPopup('onOpen' = function (e) {
+                        // do something...
+                        });</code></pre></td>
+                    <td>Trigger on opening mPopup.</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td><pre><code data-language="javascript">$('#elem').mPopup('onClose' = function (e) {
+                        // do something...
+                        });</code></pre></td>
+                    <td>Trigger on closing mPopup.</td>
+                </tr>
+            </table>
         </div>
     </div>
-
+    <div role="complementary" class="col-md-3">
+        <nav class="sidebar-menu nav-pills nav-stacked" id="sidenav" data-spy="affix">
+            <a href="#top">mPopup</a>
+            <ul class="nav">
+                <li><a href="#how-to-install">How to install</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#options">Options</a></li>
+                <li><a href="#methods">Methods</a></li>
+                <li><a href="#events">Events</a></li>
+            </ul>
+            <a href="#top" class="back-to-top">
+                Back to top
+            </a>
+        </nav>
+    </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<script src="js/vendor/rainbow-custom.min.js"></script>
+<script src="js/vendor/highlight.pack.js"></script>
 <script src="../dist/mPopup.jquery.min.js"></script>
 <script src="js/main.func.js"></script>
 </body>
