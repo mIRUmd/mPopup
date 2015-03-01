@@ -9,10 +9,10 @@ install via NPM: `npm install m-popup`
 Install via NuGet `PM> Install-Package mPopup`
 
 
-###License
+##License
 Released under the MIT license - http://opensource.org/licenses/MIT
 
-Created by [Balan Miroslav](http://twitter.com/mIRUmd) & [contributors](https://github.com/mIRUmd/mPopup/contributors).
+Created by [Balan Miroslav](http://twitter.com/mIRUmd)
 
 ## Why should I use this popup?
 * Popup can contain images, video, or HTML content
