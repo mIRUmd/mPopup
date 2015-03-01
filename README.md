@@ -9,7 +9,7 @@ install via NPM: `npm install m-popup`
 Install via NuGet `PM> Install-Package mPopup`
 
 
-##License
+## License
 Released under the MIT license - http://opensource.org/licenses/MIT
 
 Created by Balan Miroslav
