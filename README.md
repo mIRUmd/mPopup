@@ -6,8 +6,12 @@ Fast, light and customizable jQuery popup plugin.
 
 Optionally, install via Bower: `bower install m-popup` ,
 install via NPM: `npm install m-popup`
+Install via NuGet `PM> Install-Package mPopup`
 
-If you used mPopup in some interesting way, or on site of popular brand, I'd be very grateful if you <a href="mailto:mIRU.md@gmail.com?subject="Site that uses mPopup"">shoot me</a> a link to it.
+Written by: Balan Miroslav
+
+###License
+Released under the MIT license - http://opensource.org/licenses/MIT
 
 ## Why should I use this popup?
 * Popup can contain images, video, or HTML content
@@ -25,7 +29,7 @@ For complete documentation and examples, visit:
 ### Step 1: Link required files
 First and most important, the jQuery library needs to be included (Google cdn or local jQuery file). Next, download the package from github or install via Bower: `bower install m-popup` , install via NPM: `npm install m-popup`, and link the mPopup CSS file (for the theme) and the mPopup Javascript file.
 
-```
+```html
 <!-- jQuery library (served from Google) -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <!-- mPopup Javascript file -->
@@ -37,13 +41,13 @@ First and most important, the jQuery library needs to be included (Google cdn or
 ### Step 2: Create HTML markup
 Create a `<ul class="mPopup">` element, with any HTML content , in css have to show width and height of popup
 
-````
+```html
 <div class="mPopup">
     <!-- any HTML content -->
 
 ````
 
-```
+```css
 .mPopup{
     /* popup css code */
     width: 60%;
@@ -54,7 +58,7 @@ Create a `<ul class="mPopup">` element, with any HTML content , in css have to s
 ### Step 3: Call the mPopup
 Call .mPopup() on `<ul class="mPopup">`. Note that the call must be made inside of a $(document).ready() call, or the plugin will not work!
 
-```
+```javascript
 $(document).ready(function(){
     // generate popup
     var popup = $('.mPopup').mPopup();

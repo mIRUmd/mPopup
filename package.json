@@ -1,6 +1,6 @@
 {
   "name": "m-popup",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "title": "mPopup",
   "description": "jQuery modal dialog plugin. Can display inline HTML, iframes (YouTube video, Vimeo, Google Maps).",
   "keywords": [
@@ -15,7 +15,7 @@
   "author": {
     "name": "Balan Miroslav",
     "email": "mIRU.md@gmail.com",
-    "web": "https://github.com/mIRUmd/"
+    "web": "http://mirudev.com/mpopup/"
   },
   "license": "MIT",
   "bugs": {

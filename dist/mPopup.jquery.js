@@ -1,4 +1,4 @@
-/*! mPopup - v1.0.7 - 2015-02-24
+/*! mPopup - v1.0.8 - 2015-03-01
 * https://github.com/mIRUmd/mPopup/
 * Copyright (c) 2015 Balan Miroslav; */
 
