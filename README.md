@@ -12,7 +12,7 @@ Install via NuGet `PM> Install-Package mPopup`
 ##License
 Released under the MIT license - http://opensource.org/licenses/MIT
 
-Created by [Balan Miroslav](http://twitter.com/mIRUmd)
+Created by Balan Miroslav
 
 ## Why should I use this popup?
 * Popup can contain images, video, or HTML content
