@@ -45,6 +45,7 @@ Create a `<ul class="mPopup">` element, with any HTML content , in css have to s
 ```html
 <div class="mPopup">
     <!-- any HTML content -->
+</div>
 
 ````
 
