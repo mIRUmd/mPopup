@@ -8,10 +8,11 @@ Optionally, install via Bower: `bower install m-popup` ,
 install via NPM: `npm install m-popup`
 Install via NuGet `PM> Install-Package mPopup`
 
-Written by: Balan Miroslav
 
 ###License
 Released under the MIT license - http://opensource.org/licenses/MIT
+
+Created by [Balan Miroslav](http://twitter.com/mIRUmd) & [contributors](https://github.com/mIRUmd/mPopup/contributors).
 
 ## Why should I use this popup?
 * Popup can contain images, video, or HTML content
@@ -188,11 +189,6 @@ $('#elem').mPopup('onClose' = function (e) {
 
 ## [Changelog](https://github.com/mIRUmd/mPopup/releases)
 
-## License
-
-Script is MIT licensed and free and will always be kept this way.
-
-Created by [@mIRUmd](http://twitter.com/mIRUmd) & [contributors](https://github.com/mIRUmd/mPopup/contributors).
 
 
 
