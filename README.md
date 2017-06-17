@@ -174,7 +174,7 @@ $('#elem').mPopup('destroy')
 **onOpen**
 Trigger on opening mPopup.
 ```
-$('#elem').mPopup('onOpen' = function (e) {
+$('#popup').on('mPopop:open' = function (e) {
                    // do something...
                 });
 ```
@@ -182,7 +182,7 @@ $('#elem').mPopup('onOpen' = function (e) {
 **onClose**
 Trigger on closing mPopup.
 ```
-$('#elem').mPopup('onClose' = function (e) {
+$('#popup').on('mPopop:close' = function (e) {
                    // do something...
                 });
 ```
@@ -190,8 +190,4 @@ $('#elem').mPopup('onClose' = function (e) {
 
 ## [Changelog](https://github.com/mIRUmd/mPopup/releases)
 
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mIRUmd/mpopup/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 

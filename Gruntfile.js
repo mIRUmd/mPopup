@@ -66,7 +66,8 @@ module.exports = function(grunt) {
                     console: true,
                     module: true,
                     document: true
-                }
+                },
+                reporterOutput: ''
             }
         },
         watch: {

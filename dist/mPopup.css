@@ -1,6 +1,6 @@
-/*! mPopup - v1.0.9 - 2015-03-01
+/*! mPopup - v1.0.10 - 2017-06-17
 * https://github.com/mIRUmd/mPopup/
-* Copyright (c) 2015 Balan Miroslav; */
+* Copyright (c) 2017 Balan Miroslav; */
 
 .mPopup{
     top: 50%;
@@ -11,8 +11,7 @@
     max-width: 700px;
     display: none;
     width: 88%;
-    -webkit-border-radius: 3px;
-            border-radius: 3px;
+    border-radius: 3px;
 }
 
 .mPopup-overlay{

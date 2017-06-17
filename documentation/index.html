@@ -25,7 +25,7 @@
             <div class="step">
                 <h3>Step 1: Link required files</h3>
                 <p>First and most important, the jQuery library needs to be included (Google cdn or local jQuery file). Next, download the package from github or install via Bower: <code>bower install m-popup</code> , install via NPM: <code>npm install m-popup</code>,  and link the mPopup CSS file (for the theme) and the mPopup Javascript file.</p>
-            <pre><code data-language="html">    &lt;!-- jQuery library (served from Google) --&gt;
+                <pre><code data-language="html">    &lt;!-- jQuery library (served from Google) --&gt;
     &lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js&quot;&gt;&lt;/script&gt;
     &lt;!-- mPopup Javascript file --&gt;
     &lt;script src=&quot;/js/mPopup.jquery.min.js&quot;&gt;&lt;/script&gt;
@@ -37,11 +37,11 @@
                 <h3>Step 2: Create HTML markup</h3>
                 <p>Create a <code>&lt;ul class="mPopup"&gt;</code> element, with any HTML content , in css have to show width and height of popup</p>
                 HTML :
-        <pre><code data-language="html">    &lt;div class=&quot;mPopup&quot;&gt;
+                <pre><code data-language="html">    &lt;div class=&quot;mPopup&quot;&gt;
     &lt;!-- any HTML content --&gt;
     &lt;/div&gt;</code></pre>
                 CSS :
-        <pre><code data-language="css">
+                <pre><code data-language="css">
     .mPopup{
         /* popup css code */
         width: 60%;
@@ -52,7 +52,7 @@
             <div class="step">
                 <h3>Step 3: Call the mPopup</h3>
                 <p>Call .mPopup() on <code>&lt;ul class="mPopup"&gt;</code>. Note that the call must be made inside of a $(document).ready() call, or the plugin will not work!</p>
-        <pre><code data-language="javascript">
+                <pre><code data-language="javascript">
     $(document).ready(function(){
         // generate popup
         var popup = $(&#39;.mPopup&#39;).mPopup();
@@ -66,7 +66,7 @@
             <h2 id="examples" class="page-header">Examples</h2>
             <h3>1. Basic popup</h3>
             HTML :
-    <pre><code data-language="html">    &lt;a href=&quot;#&quot; id=&quot;_open-sample1&quot; class=&quot;btn btn-primary&quot;&gt;Click me!&lt;/a&gt;
+            <pre><code data-language="html">    &lt;a href=&quot;#&quot; id=&quot;_open-sample1&quot; class=&quot;btn btn-primary&quot;&gt;Click me!&lt;/a&gt;
     &lt;div id=&quot;_sample1&quot; class=&quot;mPopup&quot;&gt;
         &lt;button class=&quot;mPopup-close&quot;&gt;&#215;&lt;/button&gt;
         &lt;div class=&quot;popup-header&quot;&gt;Popup title&lt;/div&gt;
@@ -76,7 +76,7 @@
         &lt;/div&gt;
     &lt;/div&gt;</code></pre>
             JS :
-    <pre><code data-language="javascript">
+            <pre><code data-language="javascript">
     // generate popup
     var popup = $(&#39;#sample1&#39;).mPopup();
 
@@ -97,10 +97,10 @@
                 </div>
             </div>
         </div>
-        <br />
+        <br /><br />
         <h3>2. Basic modal</h3>
         JS :
-    <pre><code data-language="javascript">
+        <pre><code data-language="javascript">
     var popup2 = $(&#39;#sample2&#39;).mPopup({
         showOverlay : false
     });
@@ -122,6 +122,55 @@
                 <button class="btn btn-danger" type="button">Delete all items</button>
                 <button class="btn btn-default" type="button">Cancel</button>
             </div>
+        </div>
+        <br /><br />
+        <h3>3. Responsive youtube popup</h3>
+        JS :
+        <pre><code data-language="javascript">
+    var popup3 = $(&#39;#sample3&#39;).mPopup();
+    $(&#39;#open-sample3&#39;).on(&#39;click&#39;,function(e){
+        e.preventDefault();
+        popup3.mPopup(&#39;open&#39;);
+    });
+    </code></pre>
+
+        <h4>Result :</h4>
+        <a href="#" id="_open-sample3" class="btn btn-primary">Click me!</a>
+        <div id="_sample3" class="mPopup modal-theme">
+            <button class="mPopup-close">×</button>
+            <div class="popup-header">Youtube video</div>
+            <div class="videoWrapper">
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <br /><br />
+        <h3>4. Open and close events</h3>
+        JS :
+        <pre><code data-language="javascript">
+    var popup4 = $(&#39;#sample4').mPopup({
+        showOverlay : false
+    });
+
+    $('#_open-sample4').on('click',function(e){
+        e.preventDefault();
+        popup4.mPopup('open');
+    });
+
+    popup4.on('mPopup:open', function () {
+        alert('mPopup opened');
+    });
+
+    popup4.on('mPopup:closed', function () {
+        alert('mPopup closed');
+    });
+    </code></pre>
+
+        <h4>Result :</h4>
+        <a href="#" id="_open-sample4" class="btn btn-primary">Click me!</a>
+        <div id="_sample4" class="mPopup modal-theme">
+            <button class="mPopup-close">×</button>
+            <div class="popup-header">Open and close events</div>
+            <div class="popup-body">Events for open or close popup</div>
         </div>
         <div class="section">
             <h2 id="options" class="page-header">Options</h2>
@@ -264,14 +313,14 @@
                 </tr>
                 <tr>
                     <th scope="row">1</th>
-                    <td><pre><code data-language="javascript">$('#elem').mPopup('onOpen' = function (e) {
+                    <td><pre><code data-language="javascript">$('#mPopup').on('mPopup:open' = function (e) {
                         // do something...
                         });</code></pre></td>
                     <td>Trigger on opening mPopup.</td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td><pre><code data-language="javascript">$('#elem').mPopup('onClose' = function (e) {
+                    <td><pre><code data-language="javascript">$('#mPopup').on('mPopup:close' = function (e) {
                         // do something...
                         });</code></pre></td>
                     <td>Trigger on closing mPopup.</td>
@@ -295,10 +344,10 @@
         </nav>
     </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 <script src="js/vendor/highlight.pack.js"></script>
-<script src="../dist/mPopup.jquery.min.js"></script>
+<script src="../dev/mPopup.jquery.js"></script>
 <script src="js/main.func.js"></script>
 </body>
 </html>

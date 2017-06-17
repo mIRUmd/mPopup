@@ -15,11 +15,11 @@
         $elem.width = elem.outerWidth();
         $elem.height = elem.outerHeight();
 
-        if(settings.positionElement == null){
+        if(settings.positionElement === null){
             var posTop = ($window.height - $elem.height) / 2,
                 posLeft = ($window.width - $elem.width) / 2;
 
-            if(type == 'absolute'){
+            if(type === 'absolute'){
                 posTop = (posTop >= 20)? posTop : 20;
                 posTop =  $document.scrollTop() + posTop ;
             }
@@ -32,8 +32,8 @@
             posLeft = posElement.left;
         }
 
-        if(typeof posModify.top != 'undefined') posTop = posTop + posModify.top;
-        if(typeof posModify.left != 'undefined') posLeft = posLeft + posModify.left;
+        if(typeof posModify.top !== 'undefined') posTop = posTop + posModify.top;
+        if(typeof posModify.left !== 'undefined') posLeft = posLeft + posModify.left;
 
         // do not show right side screen
         if((posLeft + $elem.width) > $window.width){
@@ -84,8 +84,8 @@
             return this.each(function() {
                 var $this = $(this),
                     settings = $this.data('mPopup');
-                if ($this.length == 0) { return; }
-                if (typeof(settings) == 'undefined') {
+                if ($this.length === 0) { return; }
+                if (typeof(settings) === 'undefined') {
                     var defaults = {
                         type : 'fixed',
                         closeClass : 'mPopup-close',
@@ -100,9 +100,7 @@
                         modifyPosition : {
                             top : 0,
                             left : 0
-                        },
-                        onOpen : function(){},
-                        onClose : function(){}
+                        }
                     };
                     settings = $.extend({}, defaults, options);
                     $this.data('mPopup', settings);
@@ -128,11 +126,11 @@
                 overlay = $('.' + settings.overlayClass);
 
 
-            if(overlay.length == 0)
+            if(overlay.length === 0)
                 overlay = $('<div></div>',{class : settings.overlayClass}).appendTo('body');
 
-            if($this.length==0) { console.error('Cannot find element  !');  return false}
-            _positionPopup($this,settings.type);
+            if($this.length === 0) { console.error('Cannot find element  !');  return false}
+            _positionPopup($this, settings.type);
             if(settings.showOverlay){
                 if(settings.overlayFade)
                     overlay.fadeIn('fast');
@@ -140,19 +138,17 @@
                     overlay.show();
             }
 
-            if(settings.animationType == 'slide'){
+            if(settings.animationType === 'slide'){
                 $this.slideDown(settings.animationSpeed);
-            }else if(settings.animationType == 'fade'){
+            }else if(settings.animationType === 'fade'){
                 $this.fadeIn(settings.animationSpeed);
             }else{
                 $this.show();
             }
 
-            if (settings.onOpen) {
-                settings.onOpen();
-            }
-            _triggerCloseOnOverlay($this,settings,overlay);
-            _triggerButtonClose($this,settings);
+            _triggerCloseOnOverlay($this, settings,overlay);
+            _triggerButtonClose($this, settings);
+            $this.trigger( "mPopup:open");
 
             $( window ).resize(function() {
                 _positionPopup($this,settings.type);
@@ -174,14 +170,12 @@
                     }
                 }
 
-                if (settings.onClose) {
-                    settings.onClose();
-                }
+                $this.trigger( "mPopup:close");
             };
 
-            if(settings.animationType == 'slide'){
+            if(settings.animationType === 'slide'){
                 $this.slideUp(settings.animationSpeed,hideOverlay);
-            }else if(settings.animationType == 'fade'){
+            }else if(settings.animationType === 'fade'){
                 $this.fadeOut(settings.animationSpeed,hideOverlay);
             }else{
                 $this.hide();
@@ -193,7 +187,7 @@
         'recalculate-position' : function() {
             var $this = $(this),
                 settings = $this.data('mPopup');
-            if ($this.length == 0 || !settings) { return; }
+            if ($this.length === 0 || !settings) { return; }
             _positionPopup($this,settings.type);
         },
         destroy: function(){
